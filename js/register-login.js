@@ -53,11 +53,12 @@ function logIn() {
     var users = JSON.parse(localStorage.getItem("users"));
     var userName = document.getElementById('userName');
     var userPw = document.getElementById('userPw');
+    console.log("jjjjjjj")
     for (const value of users) {
         if (userName.value === value.name && userPw.value === value.pw) {
             console.log("success");
             var location = window.location.pathname;
-            var newLocation = location.replace('/view/login.html', '/index.html')
+            var newLocation = location.replace('/login.html', '/pages/home.html')
             window.location.href = newLocation;
             return;
         }
