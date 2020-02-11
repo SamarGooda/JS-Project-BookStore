@@ -1,0 +1,54 @@
+var booksData = []
+
+class Book {
+    constructor(name,desc,img,price){
+        this.name=name;
+        this.desc=desc;
+        this.img=img;
+        this.price=price;
+    }
+    get bookName (){
+         return this.name;
+    }
+    get bookDesc (){
+        return this.desc;
+   }
+   get bookImg (){
+    return this.img;
+     }
+
+     get bookPrice(){
+         return this.price;
+     }
+  }
+
+book1 = new Book ("Anna Karena","A beautiful wife from St. Petersburg, determined to live life ...","img/img1.jpg","$19.99")
+booksData.push(book1)
+book2 = new Book ("mis","it is introduction to the operating system","photo of the book","20$")
+booksData.push(book2)
+book3 = new Book ("network","it is introduction to the operating system","photo of the book","50$")
+booksData.push(book3)
+book4 = new Book ("devops","it is introduction to the operating system","photo of the book")
+booksData.push(book4)
+book5 = new Book ("math","it is introduction to the operating system","photo of the book")
+booksData.push(book5)
+
+
+localStorage.setItem("booksData", JSON.stringify(booksData));
+ var allBooks =JSON.parse(localStorage.getItem("booksData"));
+ var row =document.getElementsByClassName("card")[1];
+ 
+ for(var i=0;i<booksData.length;i++)
+ {
+   row.innerHTML+=`<div class="cards"   style="float:left"; >
+   <img  id =" imge" src="${booksData[i].bookImg}" height="300px" width="100%">
+   <h1 id ="title"> ${booksData[i].bookName}</h1>
+             
+<p class="price" id ="pri">${booksData[i].bookPrice} </p>
+   <p id ="text"> ${booksData[i].bookDesc} </p>
+   <p><button>Add to Cart</button></p> 
+  `
+ 
+ }
+
+
