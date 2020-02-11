@@ -1,6 +1,6 @@
 
 var btn = document.getElementById('rgstr_btn');
-
+var registerbtn = document.getElementById('register');
 
 class user {
     constructor(email,password) {
@@ -49,8 +49,7 @@ function createUser(){
 
 
 
-function logIn() {
-    
+function logIn() { 
     var users = JSON.parse(localStorage.getItem("users"));
     var userName = document.getElementById('userName');
     var userPw = document.getElementById('userPw');
@@ -67,4 +66,9 @@ function logIn() {
 }
 
 
+function registerPage(){
+    location.href = "pages/register.html";
+}
+
+registerbtn.addEventListener("click",registerPage)
 
