@@ -1,0 +1,50 @@
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 10%;
+    margin: 0px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 15px;
+  }
+
+  .column {
+    float: left;
+    display: inline-block;
+    width: 25%;
+    padding: 0 10px;
+    margin-bottom: 3%;
+  }
+
+  .reading {
+      margin:0 px;
+      margin-top: 10%;
+      margin-bottom: 5%; 
+    }
+
+  .reading:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .listTitle
+  {
+      margin-left: 15px;
+     color: crimson; 
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 50%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+

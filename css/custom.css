@@ -66,6 +66,29 @@
   z-index: -1111;
 }
 
+<<<<<<< HEAD
+=======
+
+ /* header .head {
+    display: inline-block;
+    padding:  0px
+}
+
+
+header .img-head img {
+    height: 40px;
+}
+
+nav {
+    background-color: #6c757d;
+  }
+
+  body {
+    min-height: 100%;
+    background: #fafafa;
+} */
+
+>>>>>>> 755a39d19634eec1bfb50c2109604b371ca807b5
 @media screen and (max-width:800px){
   .show-menue-btn ,.hide-menue-btn{
     display: block;
@@ -96,6 +119,8 @@
     right:0;
   }
 }
+
+
 
 
 /*  gggggggggggggggggggggggggggggggggggg  */
