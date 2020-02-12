@@ -1,6 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+.header{
+  height: 100px;
+  position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  z-index: 1;
+ 
+}
+.logo{
+  float: left;
+  height: 40px;
+  width: 30px;
+}
+.header .logo .img{
+  height:70px;
+  width: 250px;
+}
+.menue{
+  float: right;
+  line-height: 100px;
+}
+.menue a{
+  color:#fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.show-menue-btn ,.hide-menue-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menue-btn{
+  float: right;
+}
+.show-menue-btn i{
+  line-height: 100px;
+}
+.menue a:hover,
+.show-menue-btn:hover,
+.hide-menue-btn:hover{
+  color: #3498db;
+}
+#ch{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
 
 
- header .head {
+ /* header .head {
     display: inline-block;
     padding:  10px
 }
@@ -17,9 +76,38 @@ nav {
   body {
     min-height: 100%;
     background: #fafafa;
+} */
+
+@media screen and (max-width:800px){
+  .show-menue-btn ,.hide-menue-btn{
+    display: block;
+  }
+  .menue{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    left: 0;
+    top:0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menue a{
+    display: block;
+    padding: 20px;
+  }
+  .hide-menue-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #ch:checked ~ .menue{
+    right:0;
+  }
 }
-
-
 
 
 /*  gggggggggggggggggggggggggggggggggggg  */
@@ -35,6 +123,7 @@ img {vertical-align: middle;}
   max-width: 100%;
   position: relative;
   margin: auto;
+
 }
 .slideshow-container .mySlides img {
     width: 100%;
