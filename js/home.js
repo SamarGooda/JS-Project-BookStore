@@ -1,4 +1,28 @@
 var booksData = []
+var home = document.getElementById("home")
+var about = document.getElementById("about")
+var category = document.getElementById("category")
+var description = document.getElementById("description")
+
+
+function homePage(){
+    location.href = "home.html";
+}
+function aboutPage(){
+    location.href = "about.html";
+}
+function categoryPage(){
+    location.href = "category.html";
+}
+function descriptionPage(){
+    location.href = "description.html";
+}
+
+
+home.addEventListener("click",homePage)
+about.addEventListener("click",aboutPage)
+contuct.addEventListener("click",categoryPage)
+description.addEventListener("click",descriptionPage)
 
 class Book {
     constructor(name,desc,img,price){
