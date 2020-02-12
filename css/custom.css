@@ -108,6 +108,7 @@ footer{
   text-align: center;
 }
 
+
 footer .logo .img{
   position: absolute;
   height:70px;
@@ -124,6 +125,7 @@ footer .info{
   text-align: center;
   bottom:0;
 }
+
 
 
 /*  gggggggggggggggggggggggggggggggggggg  */
@@ -151,6 +153,16 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.text1{
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
