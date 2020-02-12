@@ -40,7 +40,7 @@
   color: #f1f1f1;
   border: none;
   cursor: pointer;
-  border-radius: 5;
+  border-radius: 15px;
 }
 .show-menue-btn ,.hide-menue-btn{
   transition: 0.4s;
@@ -65,27 +65,7 @@
   visibility: hidden;
   z-index: -1111;
 }
-
-
- /* header .head {
-    display: inline-block;
-    padding:  0px
-}
-
-
-header .img-head img {
-    height: 40px;
-}
-
-nav {
-    background-color: #6c757d;
-  }
-
-  body {
-    min-height: 100%;
-    background: #fafafa;
-} */
-
+/* when we minimize the screen only show navigation bar */
 @media screen and (max-width:800px){
   .show-menue-btn ,.hide-menue-btn{
     display: block;
@@ -116,22 +96,37 @@ nav {
     right:0;
   }
 }
+/* footer */
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
 
-.carousel-caption {
-  bottom: 25%;
+
+footer .logo .img{
+  position: absolute;
+  height:70px;
+  width: 250px;
+  text-align: center;
+  bottom:10px;
+  left: 35px;
 }
-.carousel-caption h3 {
-    font-size: 50px;
-}
-.carousel-caption p {
-    font-size: 25px;
+footer .info{
+  position: absolute;
+  width: 100%;
   color: #fff;
+  line-height: 25px;
+  text-align: center;
+  bottom:0;
 }
 
-.defultColor {
-  color: #db2d2e;
-  font-weight: 700;
-}
+
 
 /*  gggggggggggggggggggggggggggggggggggg  */
 

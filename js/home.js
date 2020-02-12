@@ -73,5 +73,3 @@ localStorage.setItem("booksData", JSON.stringify(booksData));
   `
  
  }
-
-
