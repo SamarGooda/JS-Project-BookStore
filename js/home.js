@@ -1,4 +1,27 @@
 var booksData = []
+var home = document.getElementById("home")
+var todo = document.getElementById("todo")
+var category = document.getElementById("category")
+var about = document.getElementById("about")
+
+function homePage(){
+    location.href = "home.html";
+}
+function aboutPage(){
+    location.href = "about.html";
+}
+function categoriesPage(){
+    location.href = "category.html";
+}
+function todoPage(){
+    location.href = "todo.html";
+}
+
+
+home.addEventListener("click",homePage)
+todo.addEventListener("click",todoPage)
+category.addEventListener("click",categoriesPage)
+about.addEventListener("click",aboutPage)
 
 class Book {
     constructor(name,desc,img,price){
@@ -36,7 +59,7 @@ booksData.push(book5)
 
 localStorage.setItem("booksData", JSON.stringify(booksData));
  var allBooks =JSON.parse(localStorage.getItem("booksData"));
- var row =document.getElementsByClassName("card")[1];
+ var row =document.getElementsByClassName("card")[0];
  
  for(var i=0;i<booksData.length;i++)
  {
