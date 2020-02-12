@@ -20,7 +20,7 @@ function todoPage(){
 
 home.addEventListener("click",homePage)
 todo.addEventListener("click",todoPage)
-contuct.addEventListener("click",categoriesPage)
+category.addEventListener("click",categoriesPage)
 about.addEventListener("click",aboutPage)
 
 class Book {
@@ -73,5 +73,3 @@ localStorage.setItem("booksData", JSON.stringify(booksData));
   `
  
  }
-
-
