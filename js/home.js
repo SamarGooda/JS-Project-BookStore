@@ -1,6 +1,6 @@
 var booksData = []
 var home = document.getElementById("home")
-var description = document.getElementById("description")
+var todo = document.getElementById("todo")
 var category = document.getElementById("category")
 var about = document.getElementById("about")
 
@@ -13,15 +13,15 @@ function aboutPage(){
 function categoriesPage(){
     location.href = "category.html";
 }
-function descriptionPage(){
-    location.href = "description.html";
+function todoPage(){
+    location.href = "todo.html";
 }
 
 
 home.addEventListener("click",homePage)
-about.addEventListener("click",aboutPage)
-description.addEventListener("click",descriptionPage)
+todo.addEventListener("click",todoPage)
 contuct.addEventListener("click",categoriesPage)
+about.addEventListener("click",aboutPage)
 
 class Book {
     constructor(name,desc,img,price){
