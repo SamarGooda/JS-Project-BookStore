@@ -19,8 +19,21 @@ nav {
     background: #fafafa;
 }
 
+.carousel-caption {
+  bottom: 25%;
+}
+.carousel-caption h3 {
+    font-size: 50px;
+}
+.carousel-caption p {
+    font-size: 25px;
+  color: #fff;
+}
 
-
+.defultColor {
+  color: #db2d2e;
+  font-weight: 700;
+}
 
 /*  gggggggggggggggggggggggggggggggggggg  */
 
@@ -46,6 +59,16 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.text1{
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
