@@ -3,9 +3,11 @@ var btn = document.getElementById('rgstr_btn');
 var registerbtn = document.getElementById('register');
 
 class user {
-    constructor(email,password) {
+    constructor(email,password,read,fRead) {
     this.email = email;
     this.password = password;
+    this.read = read;
+    this.fRead  = fRead;
     }
     getemail(){
         return this.email;
@@ -13,10 +15,17 @@ class user {
     getpw(){
         return this.password;
     }
+    getread(){
+        return this.read;
+    }
+    getfRead(){
+        return this.fRead;
+    }
 }
 
+
 function store(userObj) {
-        const userJson = {name : userObj.getemail() , pw: userObj.getpw() }
+        const userJson = {name : userObj.getemail() , pw: userObj.getpw() , read : userObj.getread() , fRead : userObj.getfRead()}
         const users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
         users.push(userJson);
         localStorage.setItem("users", JSON.stringify(users));
@@ -27,7 +36,8 @@ function store(userObj) {
 function createUser(){
     var name = document.getElementById('email').value;
     var pw = document.getElementById('pw').value;
-    
+    var read = [];
+    var fRead = [];
     if (name.length == 0) {
         alert('Please Enter a valid email');
 
@@ -38,14 +48,14 @@ function createUser(){
         alert('Please fill in email and password');
 
     } else {
-
-    const userO = new user (name, pw);
+    const userO = new user (name, pw, read, fRead);
     store(userO);
+    var location = window.location.pathname;
+    var newLocation = location.replace('/register.html', '/home.html')
+    window.location.href = newLocation;
 }
 
 }
-
-
 
 function logIn() { 
     var users = JSON.parse(localStorage.getItem("users"));
