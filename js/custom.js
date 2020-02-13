@@ -1,6 +1,7 @@
 var slideIndex = 0;
 showSlides();
 
+
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -17,3 +18,4 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 2000); // Change image every 3 seconds
 }
+

@@ -22,7 +22,6 @@ home.addEventListener("click",homePage)
 todo.addEventListener("click",todoPage)
 category.addEventListener("click",categoriesPage)
 about.addEventListener("click",aboutPage)
-
 class Book {
     constructor(name,desc,img,price){
         this.name=name;

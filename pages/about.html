@@ -10,33 +10,65 @@
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
 </head>
 
-<body style="background-color: lightgoldenrodyellow;">
+<body>
 
-    <div class="header">
-        <div class="logo"> <img src="../img/logo-light.png" class="img"></div>
-        <input type="checkbox" id="ch">
-        <label for="ch" class="show-menue-btn">
-          <i class="fas fa-ellipsis-v"></i>
-        </label>
-        <ul class="menue">
-          <a href="#">home</a>
-          <a href="#">about</a>
-          <a href="#">category</a>
-          <a href="#">aboutUs</a>
-          <label for="ch" class="hide-menue-btn">
-            <i class="fas fa-times"></i>
-          </label>
-        </ul>
-        </div>
-      
+  <div class="header">
+    <div class="logo"> <img src="../img/logo-light.png" class="img"></div>
+    <input type="checkbox" id="ch">
+    <label for="ch" class="show-menue-btn">
+      <i class="fas fa-ellipsis-v"></i>
+    </label>
+    <ul class="menue">
+      <button id="home">home</button>
+      <button id="category">category</button>
+      <button id="todo">todo</button>
+      <button id="about">about us</button>
 
-	<div class="cont">
-            <h2 style="margin-left: 8%;color: #6c757d;">created<span style="color: crimson;">by:</span></h2>
-            
-	</div>
+      <label for="ch" class="hide-menue-btn">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+    </div>
 
 
-    <script src="../js/about.js"></script>
-	<script src="../js/custom.js" type="text/javascript"></script>
+    <h1 class="subtitle"> <em>About Us</em> </h1>
+    <hr style="width: 150px; margin-left: 45%; margin-top: 10px;">
+    <img class="aboutimg" src="../img/aboutimg.jpg">
+    <p class="textcontent">
+    <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-style: normal; font-size:25px ; text-align: center;"><em>Our Mission</em></p>
+    <p class="mission">Our mission is to foster a universal passion for reading by partnering with authors to help create stories </p>
+    <p class="mission">and communicate ideas that inform, entertain, and inspire, and to connect them with readers everywhere.</p>
+    <p class="mission">We are an international home to nearly 400 editorially and creatively independent publishing imprints.</p>
+  </p>
+  
+  <h1 class="subtitle"> <em>Our Team</em> </h1>
+  <hr style="width: 150px; margin-left: 45%; margin-top: 10px;">
+    <div class="cont">
+
+    </div>
+  
+  <footer>
+    <div class="logo"> 
+      <img src="../img/logo-light.png" class="img">
+    </div>
+    <div class="info">
+         <h5>015525854522</h5>
+         <h5>farawlaBookstore-eg.com</h5>
+         <h5>www.farawlaBookstore.com</h5>
+        
+     </div>	
+  <div class="nav">
+    <a href="home.html">Home</a><br>
+    <a href="about.html">About</a>
+  </div>
+  <div class="photo">
+    <h5>Mobile</h5><br>
+   <img src="../img/google-play.png" width="100px"><br><br>
+   <img src="../img/app-store.png" width="100px">
+  </div>	
+  
+   </footer> 
+
+    <script src="../js/about.js"></script>  
 </body>
 </html>
