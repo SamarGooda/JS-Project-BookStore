@@ -1,4 +1,6 @@
 var booksData = []
+var catImg=["../img/drama.jpg","../img/romance.jpg","../img/bio.jpg","../img/cooking.jpg"]
+var catName=["Drama","Romance","Biology","Cooking"]
 var home = document.getElementById("home")
 var todo = document.getElementById("todo")
 var category = document.getElementById("category")
@@ -58,7 +60,8 @@ book6 = new Book ("math","it is introduction to the operating system","../img/im
 booksData.push(book6)
 book7 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
 booksData.push(book7)
-
+book8 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
+booksData.push(book8)
 
 function setCardData()
 {
@@ -66,7 +69,7 @@ localStorage.setItem("booksData", JSON.stringify(booksData));
  var allBooks =JSON.parse(localStorage.getItem("booksData"));
  var row =document.getElementsByClassName("card")[0];
  
- for(var i=0;i<booksData.length;i++)
+ for(var i=0;i<8;i++)
  {
    row.innerHTML+=`
    <div class="cards"   style="float:left"; >
@@ -79,5 +82,18 @@ localStorage.setItem("booksData", JSON.stringify(booksData));
  }
 }
 setCardData();
+
+function setCategoriesCard()
+{
+    var table =document.getElementsByClassName("categories")[0];
+    for (var i=0;i<4;i++)
+    {
+        table.innerHTML+=`<div class="cate">
+        <img class="catImg"src="${catImg[i]}">
+                    <p class="catName">${catName[i]}</p>
+                    </div>`
+    }
+}
+setCategoriesCard();
 
 
