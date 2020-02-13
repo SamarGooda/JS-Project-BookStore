@@ -36,7 +36,7 @@
   text-decoration: none;
   padding: 0 30px;
   background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  background: rgba(0, 0, 0, 0.005); /* Black background with 0.005 opacity */
   color: #f1f1f1;
   border: none;
   cursor: pointer;
@@ -98,32 +98,61 @@
 }
 /* footer */
 footer{
-  position: fixed;
-  left: 0;
   bottom: 0;
   width: 100%;
-  height: 100px;
-  background-color: black;
+  height: 120px; 
+ background-color: #3a3131;
   color: white;
   text-align: center;
-}
+  padding-top: 30px;
+  padding-bottom: 0px;
+   padding-right: 50px;
+  clear: both;
+  position: relative;
+  margin-top: -200px;
+  display: table;
 
+}
+footer .logo, .info , .photo ,.nav ,.nav a{
+  display: table-cell;
+  vertical-align: top;
+  width: 40px;
+  height: 100%;
+  font-size: 19px;
+  margin: 0 0 20px 0;
+
+}
 
 footer .logo .img{
-  position: absolute;
   height:70px;
-  width: 250px;
+  width: 300px;
   text-align: center;
   bottom:10px;
-  left: 35px;
+  left: 50px;
+  padding-left: 80px;
 }
 footer .info{
-  position: absolute;
   width: 100%;
   color: #fff;
   line-height: 25px;
   text-align: center;
-  bottom:0;
+  padding-left: 200px;
+}
+footer .nav a{
+  width: 100%;
+  color: #fff;
+  line-height: 15px;
+  text-align: center;
+  padding-left: 50px;
+  text-decoration: none;
+  padding-right:200px;
+}
+footer .photo{
+  width: 100px;
+  height: 100px; 
+ 
+  padding-right: 150px;
+
 }
 
 
