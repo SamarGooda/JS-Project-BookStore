@@ -5,68 +5,7 @@ body {
   background-attachment: fixed;
   -webkit-animation: slide 20s linear infinite;
 }
-.header{
-  height: 100px;
-  position: absolute;
-  top: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-  z-index: 1;
- 
-}
-.logo{
-  float: left;
-  height: 40px;
-  width: 30px;
-}
-.header .logo .img{
-  height:70px;
-  width: 250px;
-}
-.menue{
-  float: right;
-  line-height: 100px;
-}
 
-.menue button{
-
-  text-transform: uppercase;
-  height: 20px;
-  text-decoration: none;
-  padding: 0 30px;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.005); /* Black background with 0.005 opacity */
-  color: #f1f1f1;
-  border: none;
-  cursor: pointer;
-  border-radius: 15px;
-}
-.show-menue-btn ,.hide-menue-btn{
-  transition: 0.4s;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
-.show-menue-btn{
-  float: right;
-}
-.show-menue-btn i{
-  line-height: 100px;
-}
-
-.menue button:hover,
-.show-menue-btn:hover,
-.hide-menue-btn:hover{
-  color: #3498db;
-}
-#ch{
-  position: absolute;
-  visibility: hidden;
-  z-index: -1111;
-}
 
 @-webkit-keyframes slide {
   from { background-position: 0 0; }
