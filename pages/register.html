@@ -15,8 +15,8 @@
       <header>
     <nav>
         <div class="head">
-            <div class="img-head inline-block" style="padding: 5px 0;">
-                <img src="../img/logo-light.png">
+            <div class="img-head inline-block" style="padding:20px;">
+                <img height="80" src="../img/logo-light.png">
             </div>
         </div>
     </nav>
@@ -24,16 +24,17 @@
 <br> <br>
         <div class="login">
                 <form name='form-login'>
-            
-                    <h1 style="color:aliceblue ">REGISTER</h1>
-            
-                    <label for="name">Email</label>
-                    <input type="email"  id="email" placeholder="Email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
-                    
-                    <label for="pw">Password</label>
+                    <h1 class="login-title" >REGISTER</h1>
+
+                    <input type="email"  id="email" placeholder="Email"
+                     pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
+                    <br>
+                    <br>
                     <input type="password"
                            id= "pw"
                            placeholder="Password" required>
+                           <br>
+                           <br>
                     <button id="rgstr_btn" type="button" onclick="createUser()">Register</button>
                 </form>
             </div>

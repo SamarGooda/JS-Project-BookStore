@@ -59,7 +59,7 @@ booksData.push(book5)
 
 localStorage.setItem("booksData", JSON.stringify(booksData));
  var allBooks =JSON.parse(localStorage.getItem("booksData"));
- var row =document.getElementsByClassName("card")[1];
+ var row =document.getElementsByClassName("card")[0];
  
  for(var i=0;i<booksData.length;i++)
  {
