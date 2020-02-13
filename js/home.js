@@ -45,31 +45,40 @@ class Book {
      }
   }
 
-book1 = new Book ("Anna Karena","A beautiful wife from St. Petersburg, determined to live life ...","img/img1.jpg","$19.99")
+book1 = new Book ("Anna Karena","A beautiful wife from St. A beautiful wife from St.","../img/img1.jpg","$19.99")
 booksData.push(book1)
-book2 = new Book ("mis","it is introduction to the operating system","photo of the book","20$")
+book2 = new Book ("mis","it is introduction to the operating system","../img/img1.jpg","20$")
 booksData.push(book2)
-book3 = new Book ("network","it is introduction to the operating system","photo of the book","50$")
+book3 = new Book ("network","it is introduction to the operating system","../img/img1.jpg","50$")
 booksData.push(book3)
-book4 = new Book ("devops","it is introduction to the operating system","photo of the book")
+book4 = new Book ("devops","it is introduction to the operating system","../img/img1.jpg")
 booksData.push(book4)
-book5 = new Book ("math","it is introduction to the operating system","photo of the book")
+book5 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
 booksData.push(book5)
+book6 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
+booksData.push(book6)
+book7 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
+booksData.push(book7)
 
 
+function setCardData()
+{
 localStorage.setItem("booksData", JSON.stringify(booksData));
  var allBooks =JSON.parse(localStorage.getItem("booksData"));
  var row =document.getElementsByClassName("card")[0];
  
  for(var i=0;i<booksData.length;i++)
  {
-   row.innerHTML+=`<div class="cards"   style="float:left"; >
-   <img  id =" imge" src="${booksData[i].bookImg}" height="300px" width="100%">
+   row.innerHTML+=`
+   <div class="cards"   style="float:left"; >
+   <img  id ="imge" src="${booksData[i].bookImg}" height="300px" width="100%">
    <h1 id ="title"> ${booksData[i].bookName}</h1>
-             
-<p class="price" id ="pri">${booksData[i].bookPrice} </p>
+   <p class="price" id ="price">${booksData[i].bookPrice} </p>
    <p id ="text"> ${booksData[i].bookDesc} </p>
    <p><button>Add to Cart</button></p> 
   `
- 
  }
+}
+setCardData();
+
+
