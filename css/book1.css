@@ -1,0 +1,70 @@
+.body
+{
+    background-color:beige;
+}
+.title
+{
+    text-align: center;
+    color: rgb(110, 92, 173);
+
+}
+.img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.price
+{
+    color: crimson;
+    font-size: 30px;
+}
+.checked
+{
+ color: orangered;
+
+}
+
+.btn_btn
+{
+    margin-left: 220px;
+     background-color: #4CAF50;
+     border: none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 16px;
+     cursor: pointer;
+}
+.font-control{
+   width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+.desc
+{
+    border-style: double;
+}
+.aa
+{
+    color: crimson;
+    font-size: 30px;
+}
+.txt
+{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(110, 92, 173);
+}
+.author
+{
+
+    border-style: double;
+}
