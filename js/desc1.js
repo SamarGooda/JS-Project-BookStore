@@ -1,4 +1,4 @@
-document.getElementsByClassName("btn_btn").click();
+// document.getElementsByClassName("btn_btn").click();
 var rating="";
 function starmark(item)
 { 
