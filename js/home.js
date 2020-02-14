@@ -25,11 +25,12 @@ todo.addEventListener("click",todoPage)
 category.addEventListener("click",categoriesPage)
 about.addEventListener("click",aboutPage)
 class Book {
-    constructor(name,desc,img,price){
+    constructor(name,desc,img,price,page){
         this.name=name;
         this.desc=desc;
         this.img=img;
         this.price=price;
+        this.page=page;
     }
     get bookName (){
          return this.name;
@@ -44,6 +45,11 @@ class Book {
      get bookPrice(){
          return this.price;
      }
+
+    //  get bookPage()
+    //  {
+    //      return this.page;
+    //  }
   }
 
 book1 = new Book ("Anna Karena","A beautiful wife from St..","../img/img1.jpg","$19.99")
@@ -77,7 +83,7 @@ localStorage.setItem("booksData", JSON.stringify(booksData));
    <h1 id ="title"> ${booksData[i].bookName}</h1>
    <p class="price" id ="price">${booksData[i].bookPrice} </p>
    <p    style="color:#696969;" id ="text"> ${booksData[i].bookDesc} </p>
-   <p><button>View More ..</button></p> 
+  <button onclick="location.href='../pages/book1.html'">View More ..</button> 
   `
  }
 }

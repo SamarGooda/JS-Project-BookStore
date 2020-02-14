@@ -1,0 +1,22 @@
+body{
+
+    background-color:blanchedalmond;
+}
+.title
+{
+    text-align: center;
+    color: rgb(110, 92, 173);
+
+}
+.img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.price
+{
+    color: crimson;
+    font-size: 50px;
+}
