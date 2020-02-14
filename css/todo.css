@@ -1,9 +1,15 @@
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    height: 10%;
-    margin: 0px;
+  display: inline;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   width:20%;
+   height: 25%;
+   margin-top: 3%;
+   margin-bottom: 5%;
+   margin-right: 3%;
+   text-align: center;
+    font-family: serif;
+    border-radius: 10px;
   }
   
   .card:hover {
@@ -23,7 +29,6 @@
   }
 
   .reading {
-      margin:0 px;
       margin-top: 10%;
       margin-bottom: 5%; 
     }
@@ -37,6 +42,7 @@
   {
       margin-left: 15px;
      color: crimson; 
+     margin-bottom: 25px;
   }
 
   @media screen and (max-width: 600px) {
@@ -45,6 +51,26 @@
       display: block;
       margin-bottom: 20px;
     }
+  }
+  .bimg
+  {
+    border-radius: 10px;
+    height:300px;
+    width:100%
+  }
+  .title
+  {
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+
+  }
+  .author
+  {
+    color: crimson;
+    font-style: oblique;
+    font-size: 15px;
+    margin: 5px;
   }
   
 

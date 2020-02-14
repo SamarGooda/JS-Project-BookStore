@@ -46,7 +46,7 @@ class Book {
      }
   }
 
-book1 = new Book ("Anna Karena","A beautiful wife from St. A beautiful wife from St.","../img/img1.jpg","$19.99")
+book1 = new Book ("Anna Karena","A beautiful wife from St.","../img/img1.jpg","$19.99")
 booksData.push(book1)
 book2 = new Book ("mis","it is introduction to the operating system","../img/img1.jpg","20$")
 booksData.push(book2)
@@ -77,7 +77,7 @@ localStorage.setItem("booksData", JSON.stringify(booksData));
    <h1 id ="title"> ${booksData[i].bookName}</h1>
    <p class="price" id ="price">${booksData[i].bookPrice} </p>
    <p id ="text"> ${booksData[i].bookDesc} </p>
-   <p><button>Add to Cart</button></p> 
+   <p><button onclick="addToReadList()">Add to Cart</button></p> 
   `
  }
 }
@@ -96,4 +96,8 @@ function setCategoriesCard()
 }
 setCategoriesCard();
 
+function addToReadList()
+{
+   
+}
 

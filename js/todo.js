@@ -22,8 +22,7 @@ todo.addEventListener("click",todoPage)
 category.addEventListener("click",categoriesPage)
 about.addEventListener("click",aboutPage)
 
-var arr=[{name:"The secret", author:"by jaxson"},
-{name:"secret", author:"by jaxson"}]
+var arr=JSON.parse(localStorage.getItem("booksData"));
 
 var reading= document.getElementsByClassName("reading")[0];
 var finished= document.getElementsByClassName("finished")[0];
@@ -34,10 +33,10 @@ arr.forEach((card)=>{
 
     const content=`<div class ="column">
                     <div class="card">
-        <img src="assets/img/book.jpg" alt="Avatar" style="width:100%">
+        <img class ="bimg"src="${card.img}">
         <div class="container">
-          <h4><b>${card.name}</b></h4>
-          <p>${card.author}</p>
+          <h4 class="title"><b>${card.name}</b></h4>
+          <p class="author">${card.desc}</p>
         </div>
       </div>
     </div>`
