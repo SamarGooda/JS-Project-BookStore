@@ -46,21 +46,21 @@ class Book {
      }
   }
 
-book1 = new Book ("Anna Karena","A beautiful wife from St. A beautiful wife from St.","../img/img1.jpg","$19.99")
+book1 = new Book ("Anna Karena","A beautiful wife from St..","../img/img1.jpg","$19.99")
 booksData.push(book1)
-book2 = new Book ("mis","it is introduction to the operating system","../img/img1.jpg","20$")
+book2 = new Book ("Sand and Foam","A book of aphorisms, poems, and parables by the author ","../img/book2.jpg","20$")
 booksData.push(book2)
-book3 = new Book ("network","it is introduction to the operating system","../img/img1.jpg","50$")
+book3 = new Book ("Vineland","The story is set in California, usa","../img/book33.jpg","50$")
 booksData.push(book3)
-book4 = new Book ("devops","it is introduction to the operating system","../img/img1.jpg")
+book4 = new Book ("	Americana","Ifemelu and Obinze are young and in love ","../img/book4.jpg","22$")
 booksData.push(book4)
-book5 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
+book5 = new Book ("Great Jones Street"," It centers on rock star Bucky Wunderlick,","../img/book5.jpg","23$")
 booksData.push(book5)
-book6 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
+book6 = new Book ("Mason & Dixon"," It presents a fictionalized account of the collaboration ","../img/book6.jpg","25$")
 booksData.push(book6)
-book7 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
+book7 = new Book ("Against the Day"," It presents a fictionalized account of the collaboration","../img/book7.jpg","30$")
 booksData.push(book7)
-book8 = new Book ("math","it is introduction to the operating system","../img/img1.jpg")
+book8 = new Book ("Gravity's Rainbow","Lengthy, complex, and featuring a large cast of characters","../img/book8.jpg","10$")
 booksData.push(book8)
 
 function setCardData()
@@ -76,8 +76,8 @@ localStorage.setItem("booksData", JSON.stringify(booksData));
    <img  id ="imge" src="${booksData[i].bookImg}" height="300px" width="100%">
    <h1 id ="title"> ${booksData[i].bookName}</h1>
    <p class="price" id ="price">${booksData[i].bookPrice} </p>
-   <p id ="text"> ${booksData[i].bookDesc} </p>
-   <p><button>Add to Cart</button></p> 
+   <p    style="color:#696969;" id ="text"> ${booksData[i].bookDesc} </p>
+   <p><button>View More ..</button></p> 
   `
  }
 }
