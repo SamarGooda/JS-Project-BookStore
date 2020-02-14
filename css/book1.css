@@ -20,3 +20,8 @@ body{
     color: crimson;
     font-size: 50px;
 }
+.checked
+{
+ color: orangered;
+
+}
