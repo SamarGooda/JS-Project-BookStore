@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="../css/register-login.css">
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
-    
-   
-</head>
-<body>
-  <header>
-    <nav>
-        <div class="head">
-            <div class="img-head inline-block" style="padding:20px;">
-                <img height="80" src="../img/logo-light.png" alt="logo">
-            </div>
-        </div>
-    </nav>
-</header>
-<br>
-<br>
-        <div class="login">
-                <form name='form-login'>
-                    <h1 class="login-title" >REGISTER</h1>
 
-                    <input type="email"  id="email" placeholder="Email"
-                     pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
-                    <br>
-                    <br>
-                    <input type="password"
-                           id= "pw"
-                           placeholder="Password" required>
-                           <br>
-                           <br>
-                    <button id="rgstr_btn" type="button" onclick="createUser()">Register</button>
-                </form>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="head">
+                <div class="img-head inline-block" style="padding:20px;">
+                    <img height="80" src="../img/logo-light.png" alt="logo">
+                </div>
             </div>
-            
-            <script src="../js/register-login.js" type="text/javascript"></script>   
-  
+        </nav>
+    </header>
+    <br>
+    <br>
+    <div class="login">
+        <form name='form-login'  action="">
+            <h1 class="login-title">REGISTER</h1>
+            <input type="email" id="email" name="email" placeholder="Email" >
+            <br>
+            <br>
+            <input type="password" id="pw" placeholder="Password" required>
+            <br>
+            <br>
+            <button id="rgstr_btn" type="button" onclick="createUser()">Register</button>
+        </form>
+    </div>
+
+    <script src="../js/register-login.js" type="text/javascript"></script>
+
 </body>
 
 </html>
