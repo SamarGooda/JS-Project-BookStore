@@ -24,3 +24,24 @@ function showRating()
 {
     alert(rating);
 }
+ var booktitle=document.getElementById("title");
+ var bookimg=document.getElementById("img");
+ var bookdesc=document.getElementById("desc");
+ var bookprice=document.getElementById("price");
+ var bookauthor=document.getElementById("aa");
+
+ var selectedbook =JSON.parse(localStorage.getItem("selectedBook"));
+ var allBooks =JSON.parse(localStorage.getItem("booksData"));
+
+ 
+ for(let i=0;i<allBooks.length;i++)
+ {
+  if(allBooks[i].id==selectedbook){    
+    booktitle.textContent=allBooks[i].name;
+    bookimg.src=allBooks[i].img;
+    bookdesc.textContent=allBooks[i].desc;
+    bookprice.textContent=allBooks[i].price;
+    bookauthor.textContent=allBooks[i].author;
+  }
+
+ }
