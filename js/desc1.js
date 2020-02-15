@@ -45,3 +45,27 @@ function showRating()
   }
 
  }
+
+ var home = document.getElementById("home")
+var todo = document.getElementById("todo")
+var category = document.getElementById("category")
+var about = document.getElementById("about")
+
+function homePage(){
+    location.href = "home.html";
+}
+function aboutPage(){
+    location.href = "about.html";
+}
+function categoriesPage(){
+    location.href = "category.html";
+}
+function todoPage(){
+    location.href = "todo.html";
+}
+
+
+home.addEventListener("click",homePage)
+todo.addEventListener("click",todoPage)
+category.addEventListener("click",categoriesPage)
+about.addEventListener("click",aboutPage)
