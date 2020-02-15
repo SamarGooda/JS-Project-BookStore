@@ -89,6 +89,7 @@ localStorage.setItem("booksData", JSON.stringify(booksData));
    <img  id ="imge" src="${booksData[i].bookImg}" height="300px" width="100%">
    <h1 id ="title"> ${booksData[i].bookName}</h1>
    <p class="price" id ="price">${booksData[i].bookPrice} </p>
+
    <p    style="color:#696969;" id ="text"> ${booksData[i].bookDesc} </p>
   <button onclick='localStorage.setItem("selectedBook",${id});location.href="../pages/book1.html"' id="${booksData[i].bookId}">View More ..</button> 
   `

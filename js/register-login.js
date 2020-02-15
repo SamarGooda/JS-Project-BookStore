@@ -1,63 +1,80 @@
 
 var btn = document.getElementById('rgstr_btn');
 var registerbtn = document.getElementById('register');
+const users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
 
 class user {
-    constructor(email,password,read,fRead) {
-    this.email = email;
-    this.password = password;
-    this.read = read;
-    this.fRead  = fRead;
+    constructor(email, password, read, fRead) {
+        this.email = email;
+        this.password = password;
+        this.read = read;
+        this.fRead = fRead;
     }
-    getemail(){
+    getemail() {
         return this.email;
     }
-    getpw(){
+    getpw() {
         return this.password;
     }
-    getread(){
+    getread() {
         return this.read;
     }
-    getfRead(){
+    getfRead() {
         return this.fRead;
     }
 }
 
-
 function store(userObj) {
-        const userJson = {name : userObj.getemail() , pw: userObj.getpw() , read : userObj.getread() , fRead : userObj.getfRead()}
-        const users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
-        users.push(userJson);
-        localStorage.setItem("users", JSON.stringify(users));
-        alert('Your account has been created');
+    const userJson = { name: userObj.getemail(), pw: userObj.getpw(), read: userObj.getread(), fRead: userObj.getfRead() }
+    users.push(userJson);
+    localStorage.setItem("users", JSON.stringify(users));
+    alert('Your account has been created');
 }
 
 
-function createUser(){
+function createUser() {
     var name = document.getElementById('email').value;
     var pw = document.getElementById('pw').value;
     var read = [];
     var fRead = [];
-    if (name.length == 0) {
-        alert('Please Enter a valid email');
-
-    } else if (pw.length == 0) {
-        alert('Please fill in password');
-
-    } else if (name.length == 0 && pw.length == 0) {
+    if (name.length == 0 && pw.length == 0) {
         alert('Please fill in email and password');
 
-    } else {
-    const userO = new user (name, pw, read, fRead);
-    store(userO);
+    } else if (name.length == 0) {
+        alert('Please Enter email');
+        return;
+    } else if (pw.length == 0) {
+        alert('Please fill in password');
+        return;
+    } else if (!testEmail(name)) {
+        alert('Please Enter a valid email');
+        return;
+    } else if (emailExist(name)) {
+        alert('you already have an account');
+        return;
+    }
+    const newUser = new user(name, pw, read, fRead);
+    store(newUser);
     var location = window.location.pathname;
     var newLocation = location.replace('/register.html', '/home.html')
     window.location.href = newLocation;
 }
-
+function testEmail(value) {
+    var pattern = new RegExp('[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}')
+    return pattern.test(value);
+}
+function emailExist(value) {
+    for (var i = 0; i < users.length; i++) {
+        if(users[i].name == value) {
+            return true;
+        }
+        return false;
+    }
 }
 
-function logIn() { 
+
+
+function logIn() {
     var users = JSON.parse(localStorage.getItem("users"));
     var userName = document.getElementById('userName');
     var userPw = document.getElementById('userPw');
@@ -73,9 +90,11 @@ function logIn() {
 }
 
 
-function registerPage(){
+function registerPage() {
     location.href = "pages/register.html";
 }
 
-registerbtn.addEventListener("click",registerPage)
+if (registerbtn) {
+    registerbtn.addEventListener("click", registerPage);
+}
 
