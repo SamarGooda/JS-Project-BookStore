@@ -1,42 +1,44 @@
-/* .body
+
+.desc
 {
-    background-color:beige;
-} */
-
-body {
-    background: url("../img/background.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
-  
-
-  h1{
-    text-decoration: underline;
-    color: initial;
-    font-family: cursive;
-  }
-
+    float: right;
+    display: block;
+    background-color:#f5f5f4;
+    height: 100%;
+    margin-right: 100px;
+}
+.txt
+{
+    float: right;
+width: 500px;
+height: 400px;
+margin: 0px 0px;
+padding: 40px;
+}
+.one
+{
+    display:inline-block;
+    margin-left: 80px;
+    margin-right: 100px;
+}
 .title
 {
     text-align: center;
-    color: crimson;
-    padding-top: 114px;
-    font-family: cursive;
+    color: rgb(110, 92, 173);
+    margin: 0px 0px;
 }
 
 .img{
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    width:1000px;
+  height:600px;
+
 }
 .price
 {
     color: crimson;
     font-size: 30px;
+    padding: 40px;
 }
 .checked
 {
@@ -57,52 +59,44 @@ body {
      cursor: pointer;
 }
 .font-control{
-    width: 600px;
-    height: 120px;
-    border: 3px solid #cccccc;
-    padding: 5px;
-    font-family: Tahoma, sans-serif;
-    background-image: url(bg.gif);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    margin: 50px auto;
-    padding: 20px 25px 25px;
-    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    position: relative;
-    margin-left: 15px;
+   width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
 }
-.desc , .author
-{
-  margin: 50px auto;
-  padding: 20px 25px 25px;;
-  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
-  width: 693px;
-  border-radius: 10px;
-  position: relative;
-  height: 174px;
-  margin-left: 15px;
-}
+
 .aa
 {
     color: brown;
     font-size: 30px;
+    padding: 40px;
 }
 .txt
 {
-    font-size: 20px;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    color: brown;
-    padding-top: 10px
+    
 }
 
-.pprice{
-    margin: 50px auto;
-    padding: 20px 25px 25px;;
-    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
-    width: 216px;
-    border-radius: 10px;
-    position: relative;
-    height: 130px;
-    margin-left: 15px;
-  }
+
+.c
+{
+ background-color:#de3241;
+ color:#fff;
+}
+.b
+{
+    background-color:#de3241;
+}
+.d
+{
+    background-color:#de3241;
+}
+.texta
+{
+    margin-left: 200px;
+}
+
