@@ -34,7 +34,7 @@ a {
   color: dodgerblue;
 }
 
-.container {
+/* .container {
   font-family: cursive ;
     color: white;
     line-height: 1.2;
@@ -44,7 +44,7 @@ a {
     background: transparent;
     height: 62px;
     padding: 0 20px 0 38px;
-}
+} */
 
 p {
   line-height: 1.5em;

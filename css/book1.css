@@ -1,3 +1,4 @@
+
 .desc
 {
     float: right;
@@ -25,8 +26,8 @@ padding: 40px;
     text-align: center;
     color: rgb(110, 92, 173);
     margin: 0px 0px;
-
 }
+
 .img{
 
     width:1000px;
@@ -66,9 +67,10 @@ padding: 40px;
 	background-position: bottom right;
 	background-repeat: no-repeat;
 }
+
 .aa
 {
-    color: crimson;
+    color: brown;
     font-size: 30px;
     padding: 40px;
 }
@@ -97,3 +99,4 @@ padding: 40px;
 {
     margin-left: 200px;
 }
+
