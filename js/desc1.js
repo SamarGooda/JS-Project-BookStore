@@ -33,7 +33,7 @@ function showRating()
     const newComment = localStorage.getItem('newComment') ? JSON.parse(localStorage.getItem('newComment')) : []; 
     newComment.push(textvalue);
     localStorage.setItem("newComment",JSON.stringify(newComment));
-    alert(rating);
+    document.location.reload();
 }
 
  var booktitle=document.getElementById("title");
@@ -60,7 +60,7 @@ function showRating()
 
  for(let i=0; i<allcomments.length;i++){
    if(allcomments[i].selbook == selectedbook){
-     bookcommit.textContent=allcomments[i].val;
+        bookcommit.innerHTML+=`<div class="commentclass"> ${allcomments[i].val} </div>`
    }
  }
 
