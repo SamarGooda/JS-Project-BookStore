@@ -25,13 +25,14 @@ todo.addEventListener("click",todoPage)
 category.addEventListener("click",categoriesPage)
 about.addEventListener("click",aboutPage)
 class Book {
-    constructor(id,name,desc,img,price,author){
+    constructor(id,name,desc,img,price,author,flag){
         this.id=id;
         this.name=name;
         this.desc=desc;
         this.img=img;
         this.price=price;
         this.author=author;
+        this.flag=flag
     }
     get bookId()
     {
@@ -54,6 +55,10 @@ class Book {
      get bookAuthor()
      {
          return this.author;
+     }
+     get bookFlag()
+     {
+         return this.flag;
      }
   }
 
@@ -92,6 +97,7 @@ booksData.push(book6)
 book7 = new Book ("7","Against the Day"," Against the Day is an epic historical novel by Thomas Pynchon, published in 2006. The narrative takes place between the 1893 Chicago World's Fair and the time immediately following World War I and features more than a hundred characters spread across the United States, Europe, Mexico, Central Asia, and one or two places not strictly speaking on the map at all, according to the book jacket blurb written by Pynchon. Like its predecessors, Against the Day is an example of historiographic metafiction or metahistorical romance. At 1,085 pages it is the longest of Pynchon's novels to date.","../img/book7.jpg","30$","Thomas Pynchon")
 booksData.push(book7)
 book8 = new Book ("8","Gravity's Rainbow","Winner of the 1973 National Book Award, Gravity's Rainbow is a postmodern epic, a work as exhaustively significant to the second half of the 20th century as Joyce's Ulysses was to the first. Its sprawling, encyclopedic narrative, and penetrating analysis of the impact of technology on society make it an intellectual tour de force.Winner of the 1973 National Book Award, Gravity's Rainbow is a postmodern epic, a work as exhaustively significant to the second half of the 20th century as Joyce's Ulysses was to the first. Its sprawling, encyclopedic.","../img/book8.jpg","10$","Thomas Pynchon")
+
 booksData.push(book8)
 
 function setCardData()

@@ -1,6 +1,7 @@
 
 var btn = document.getElementById('rgstr_btn');
 var registerbtn = document.getElementById('register');
+
 const users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
 
 class user {
@@ -28,6 +29,7 @@ function store(userObj) {
     const userJson = { name: userObj.getemail(), pw: userObj.getpw(), read: userObj.getread(), fRead: userObj.getfRead() }
     users.push(userJson);
     localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("loginUser",JSON.stringify(userJson.name));
     alert('Your account has been created');
 }
 
@@ -81,6 +83,7 @@ function logIn() {
     for (const value of users) {
         if (userName.value === value.name && userPw.value === value.pw) {
             var location = window.location.pathname;
+            localStorage.setItem("loginUser",JSON.stringify(value.name));
             var newLocation = location.replace('/login.html', '/pages/home.html')
             window.location.href = newLocation;
             return;

@@ -57,6 +57,48 @@ function showRating()
   }
 
  }
+ var username= JSON.parse(localStorage.getItem("loginUser"));
+ var usersObject=JSON.parse(localStorage.getItem("users"))
+
+ function setReadingArray()
+ {  
+    for(var i=0;i<usersObject.length;i++)
+    {
+        if(usersObject[i].name==username)
+        {
+            for(var j=0;j<allBooks.length;j++)
+            {
+                
+                if(allBooks[j].id==selectedbook)
+                {
+                    console.log("hello");
+                    if(usersObject[i].read.length!=0)
+                    {
+                    for (var k=0;k<usersObject[i].read.length;k++)
+                    {
+                        if(usersObject[i].read[k].id==allBooks[j].id)
+                        {
+                        alert("You have been added this book before ^_^")
+                        }
+                        else
+                        {
+                            console.log("hellooo");
+                        usersObject[i].read.push(allBooks[j]);
+                        localStorage.setItem("users", JSON.stringify(usersObject))
+                        console.log("hellooooo");
+                        }
+                    }
+                }else{
+                    usersObject[i].read.push(allBooks[j]);
+                    localStorage.setItem("users", JSON.stringify(usersObject))
+                }
+                }
+            }
+        }
+    }
+ }
+
+ 
 
  for(let i=0; i<allcomments.length;i++){
    if(allcomments[i].selbook == selectedbook){
