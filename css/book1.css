@@ -130,9 +130,15 @@ margin-top: 80%;
 .startReading
 {
     color: white;
-    background-color: #de3241;
+    background-color: darkgreen;
     border: none;
     width: 150px;
     height: 50px;
     font-size: 20px;
+    border-radius: 22px
+}
+
+.startReading:hover{
+    background-color: crimson;
+    color: black;
 }
