@@ -1,4 +1,7 @@
 // document.getElementsByClassName("btn_btn").click();
+textarea = document.getElementById('textarea');
+var allcomments = JSON.parse(localStorage.getItem("newComment"));
+var bookcommit = document.getElementById("commt");
 var rating="";
 function starmark(item)
 { 
@@ -22,8 +25,17 @@ function starmark(item)
 }
 function showRating()
 {
-    alert(rating);
+    var textvalue = { val: textarea.value , selbook :JSON.parse(localStorage.getItem("selectedBook"))}
+    if(textvalue.length == 0){
+        alert('Please write a comment');
+        return;
+    }
+    const newComment = localStorage.getItem('newComment') ? JSON.parse(localStorage.getItem('newComment')) : []; 
+    newComment.push(textvalue);
+    localStorage.setItem("newComment",JSON.stringify(newComment));
+    document.location.reload();
 }
+
  var booktitle=document.getElementById("title");
  var bookimg=document.getElementById("img");
  var bookdesc=document.getElementById("desc");
@@ -33,7 +45,7 @@ function showRating()
  var selectedbook =JSON.parse(localStorage.getItem("selectedBook"));
  var allBooks =JSON.parse(localStorage.getItem("booksData"));
 
- 
+
  for(let i=0;i<allBooks.length;i++)
  {
   if(allBooks[i].id==selectedbook){    
@@ -88,7 +100,13 @@ function showRating()
 
  
 
- var home = document.getElementById("home")
+ for(let i=0; i<allcomments.length;i++){
+   if(allcomments[i].selbook == selectedbook){
+        bookcommit.innerHTML+=`<div class="commentclass"> ${allcomments[i].val} </div>`
+   }
+ }
+
+var home = document.getElementById("home")
 var todo = document.getElementById("todo")
 var category = document.getElementById("category")
 var about = document.getElementById("about")
@@ -111,3 +129,4 @@ home.addEventListener("click",homePage)
 todo.addEventListener("click",todoPage)
 category.addEventListener("click",categoriesPage)
 about.addEventListener("click",aboutPage)
+

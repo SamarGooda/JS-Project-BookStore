@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../css/book1.css">
-        <link rel="stylesheet" type="text/css" href="../css/custom.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <style>
-        body{
-            background-color:beige;
-        }
-    </style> -->
-    <title>Anna Karena</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/book1.css">
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+    </style>
+    <title>Book Describtion</title>
 </head>
+
 <body>
+
     <div class="header">
         <div class="logo"> <img src="../img/logo-light.png" class="img"></div>
         <input type="checkbox" id="ch">
@@ -34,54 +36,58 @@
           </label>
         </ul>
         </div>
+    <h1 class="title " id="title" ></h1> 
 
-    <h1 class="title " id ="title"></h1>
-    <div>
+    <div class="one">
 
-   <img id ="img"  class="img" src="" width="100%" height="500px">  
-
-    </div>
-    <br>
-    <div class="desc" >
-        <h1>Describition</h1>
-     <p class="txt" id ="desc">
-        <!-- Acclaimed by many as the world's greatest novel,
-         Anna Karenina provides a vast panorama of contemporary life
-          in Russia and of humanity in general. In it Tolstoy uses his intense imaginative 
-          insight to create some of the most memorable characters in all of literature.
-           Anna is a sophisticated woman who abandons her empty existence as the wife of Karenin
-            and turns to Count Vronsky to fulfil her passionate nature - with tragic consequences.
-             Levin is a reflection of Tolstoy himself, often expressing the author's own views and convictions -->
-     </p>
-    </div>
-    <br> <br> <br>
-    <div class ="pprice"  >
-    <h1>Price $ </h1>
-    <p class ="price " id ="price"> </p>
-</div>
-
-<div class="author">
-    <h1>Author </h1>
-    <p class="aa" id ="aa"> </p>
-
-</div>
-
-<div class="stars" >
-    <h1 style="text-decoration: underline;">Rating  </h1>
-           <span  class="fa fa-star checked " onmouseover="starmark(this)" on click  ="starmark(this)" id="1one" style ="font-size: 40px;cursor: pointer;"></span>
-           <span  class="fa fa-star checked " onmouseover="starmark(this)" on click  ="starmark(this)" id="2one" style ="font-size: 40px;cursor: pointer;"></span>
-           <span  class="fa fa-star checked " onmouseover="starmark(this)" on click  ="starmark(this)" id="3one" style ="font-size: 40px;cursor: pointer;"></span>
-           <span  class="fa fa-star checked " onmouseover="starmark(this)" on click  ="starmark(this)" id="4one" style ="font-size: 40px;cursor: pointer;"></span>
-           <span  class="fa fa-star checked " onmouseover="starmark(this)" on click  ="starmark(this)" id="5one" style ="font-size: 40px;cursor: pointer;"></span>
+        <img id="img" class="img" src="" style=" border-radius: 10px;">
+        <div class="stars" style="padding-left: 400px;">
+            <h1 style="color: black;"><span class="a"> Put Your Rating</span> </h1>
+            <span class="fa fa-star checked " onmouseover="starmark(this)" on click="starmark(this)" id="1one"
+                style="font-size: 40px;cursor: pointer;"></span>
+            <span class="fa fa-star checked " onmouseover="starmark(this)" on click="starmark(this)" id="2one"
+                style="font-size: 40px;cursor: pointer;"></span>
+            <span class="fa fa-star checked " onmouseover="starmark(this)" on click="starmark(this)" id="3one"
+                style="font-size: 40px;cursor: pointer;"></span>
+            <span class="fa fa-star checked " onmouseover="starmark(this)" on click="starmark(this)" id="4one"
+                style="font-size: 40px;cursor: pointer;"></span>
+            <span class="fa fa-star checked " onmouseover="starmark(this)" on click="starmark(this)" id="5one"
+                style="font-size: 40px;cursor: pointer;"></span>
             <br> <br> <br>
-            <textarea class ="font-control" rows="3" placeholder="Enter you Feedback" ></textarea>
-            <br> 
-                <button  class="btn_btn">Submit</button>
+            
+            
+        </div>
+        <div  id="commt">
+            
+        </div>
+        <div class="texta">
+            <textarea id="textarea" class="font-control" rows="3" placeholder="Enter you Feedback"></textarea>
+            <br>
+            <button onclick="showRating()" class="btn_btn">Submit</button>
+        </div>
 
-           
-       </div>
+    </div>
 
-       <footer>
+    <div class="desc">
+        <h1 style="margin: 0px 0px;"><span class="c" style="padding: 5px">Description</span></h1>
+        <p class="txt" id="desc" style="color:#696969">
+
+        </p>
+        <br><br>
+        <div class="pprice">
+            <h1 style="color: white;"> <span class="b" style="padding: 8px">Price</span> </h1>
+            <p class="price " id="price" style="color:#696969"> </p>
+
+
+
+        </div>
+        <div class="author">
+            <h1 style="color: white;"><span class="d" style="padding: 8px">Author</span> </h1>
+            <p class="aa" id="aa" style="color:#696969"> </p>
+
+        </div>
+    </div>
+    <footer>
         <div class="logo"> 
           <img src="../img/logo-light.png" class="img">
         </div>
@@ -101,8 +107,11 @@
        <img src="../img/app-store.png" width="100px">
       </div>
        </footer> 
-       <script src="../js/desc1.js" type="text/javascript"></script> 
-      
 
-    </body>
+
+
+    <script src="../js/desc1.js" type="text/javascript"></script>
+
+</body>
+
 </html>
