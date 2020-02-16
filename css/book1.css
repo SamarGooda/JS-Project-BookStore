@@ -35,6 +35,7 @@ padding: 10%;
     /* :30%; */
 
 }
+
 .img{
 
     width: var(--cover-width);
@@ -75,9 +76,10 @@ padding: 10%;
 	background-position: bottom right;
 	background-repeat: no-repeat;
 }
+
 .aa
 {
-    color: crimson;
+    color: brown;
     font-size: 30px;
     padding:10%;
 
