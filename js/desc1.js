@@ -26,7 +26,7 @@ function starmark(item)
 function showRating()
 {
     var textvalue = { val: textarea.value , selbook :JSON.parse(localStorage.getItem("selectedBook"))}
-    if(textvalue.length == 0){
+    if(textarea.value ==0){
         alert('Please write a comment');
         return;
     }
@@ -71,7 +71,6 @@ function showRating()
                 
                 if(allBooks[j].id==selectedbook)
                 {
-                    console.log("hello");
                     if(usersObject[i].read.length!=0)
                     {
                     for (var k=0;k<usersObject[i].read.length;k++)
@@ -82,23 +81,23 @@ function showRating()
                         }
                         else
                         {
-                            console.log("hellooo");
+                          
                         usersObject[i].read.push(allBooks[j]);
                         localStorage.setItem("users", JSON.stringify(usersObject))
-                        console.log("hellooooo");
+                            alert("The book added sucessfully ^_^")
                         }
                     }
                 }else{
                     usersObject[i].read.push(allBooks[j]);
                     localStorage.setItem("users", JSON.stringify(usersObject))
+                    alert("The book added sucessfully ^_^")
                 }
                 }
             }
         }
     }
  }
-
- 
+document.getElementsByClassName("startReading")[0].addEventListener("click",setReadingArray)
 
  for(let i=0; i<allcomments.length;i++){
    if(allcomments[i].selbook == selectedbook){

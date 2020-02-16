@@ -12,6 +12,7 @@
     height: 40%;
     width: 30%;
     margin-right: 5%;
+    margin-bottom: 5%;
 }
 .txt
 {
@@ -125,4 +126,13 @@ padding: 10%;
 }
 .pprice{
 margin-top: 80%;
+}
+.startReading
+{
+    color: white;
+    background-color: #de3241;
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
 }
